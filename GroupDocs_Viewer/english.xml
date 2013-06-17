@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE modification SYSTEM "http://www.simplemachines.org/xml/modification">
+
+<modification xmlns="http://www.simplemachines.org/xml/modification" xmlns:smf="http://www.simplemachines.org/">
+	<id>Enik:Adkcustomblock</id>
+	<version>1.0</version>
+	
+	<file name="$languagedir/Modifications.english-utf8.php" error="skip">
+		<operation>
+			<search position="end" />
+		<add><![CDATA[
+
+
+$txt['gdv_enable'] = 'Enable GroupDocs Viewer button throughout the forum.<br /><b>Checking this option will be displayed throughout the forum.<br />When this option is active does not activate the other.</b>';
+
+]]></add>
+		</operation>
+	</file>
+	
+	<file name="$languagedir/Modifications.english.php">
+		<operation>
+			<search position="end" />
+			<add><![CDATA[
+
+
+$txt['gdv_enable'] = 'Enable GroupDocs Viewer button throughout the forum.<br /><b>Checking this option will be displayed throughout the forum.<br />When this option is active does not activate the other.</b>';
+
+]]></add>
+		</operation>
+	</file>	
+</modification>

@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!DOCTYPE modification SYSTEM "http://www.simplemachines.org/xml/modification">
+
+<modification xmlns="http://www.simplemachines.org/xml/modification" xmlns:smf="http://www.simplemachines.org/">
+	<id>GroupDocs:Groupdocs Viewer</id>
+	<version>1.0</version>
+
+		<file name="$themedir/Post.template.php">
+		<operation>
+           
+			<search position="end"></search>
+			<add><![CDATA[			
+             echo '
+                <script type="text/javascript"><!-- // --><![CDATA[
+                window.onload = function()
+                {
+                    var panele = document.getElementById("bbcBox_message");
+                    var button = document.createElement("div");
+                    button.setAttribute("id", "groupdocs")
+                    button.innerHTML = \'<img onClick="insert();" width="23" height="22" align="bottom" title="GroupDocs Viewer" alt="GroupDocs Viewer" src="/themes/default/images/bbc/viewer.gif" style="cursor: pointer; background-image: url("/themes/default/images/bbc/bbc_bg.gif");">\'
+                    panele.appendChild(button);
+                }
+                function insert() {
+                    var ans=prompt(\'Enter GroupDocs File ID:\',\'\');
+                    if(ans.length<50) { alert(\'Sorry, but this File ID is too short\'); return false; }
+                    if(ans.length>70) { alert(\'Sorry, but this File ID is too big\'); return false; }
+                    // all good continue
+                    var cmsName = \'SMF-Viewer\'
+                    var cmsVersion = \'1.0\'
+                    var iframe = \'[html]<iframe src="https://apps.groupdocs.com/document-viewer/embed/\'+ans+\'?&referer=\'+cmsName+\'/\'+cmsVersion+\'" frameborder="0" width="600" height="400">If you can see this text, your browser does not support iframes. Please enable iframe support in your browser or use the latest version of any popular web browser such as Mozilla Firefox or Google Chrome. For more help, please check our documentation Wiki: http://groupdocs.com/docs/display/Viewer/GroupDocs+Viewer+Integration+with+3rd+Party+Platforms</iframe>[/html]\';
+                    textArea = document.getElementById("message");
+                    textArea.value = textArea.value + iframe;
+                }
+                </script>';
+          
+          ]]></add>
+		</operation>
+	</file>
+	
+	<file name="$sourcedir/ManageSettings.php">
+		<operation>
+			<search position="before"><![CDATA[		// Mod authors, add any settings UNDER this line. Include a comma at the end of the line and don't remove this statement!!
+]]></search>
+			<add><![CDATA[
+	
+	    array('check', 'gdv_enable'),
+		
+			
+]]></add>
+		</operation>
+	</file>
+	
+</modification>
