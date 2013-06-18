@@ -5,12 +5,28 @@
 With GroupDocs Viewer plugin for SMF CMS you can easily view on website PDF's, Word documents, Excel documents, Powerpoint documents and more with the GroupDocs Viewer tool, directly from within your SMF website.
 
 
-###Plugin Manual Installation Instructions:
+###Installation Instuctions
 
-1. Download archive and place admin_groupdocsviewer (which contain module files) folder in site/modiles
-2. By default SMF CMS doesn't come with TinyMCE, but If you have TinyMCE installed you have to exchange file called tiny_mce.js in "modules/tynimce/js" with the one in module "admin_groupdocsviewer/tiny_mce.js". Or add "+iframe[src|style|width|height|scrolling|marginwidth|marginheight|frameborder]" with double quotes instead of 0(zero) in extended_valid_elements:0, in that file.
-3. Go to admin and under Modules -> Uninstalled Modules install GroupDocs
-4. If plugin doesn't work with tinyMCE please copy tiny_MCE.js file from plugin directory to modules/tinymce/js with rewrite
+1. Unzip GroupDocs_Viewer archive to the root/packages/
+
+2. Place viewer.gif to the root/themes/default/images/bbc folder
+3. Go to the Admin->Package Manager
+4. Click install mod opposite GroupDocs Viewer
+
+5. On next screen click Install now
+
+6. To insert groupDocs Viewer iframe to the post go to edit post and click on GroupDocs icon.
+
+7. On dialog inser file GUID and click Ok
+
+8. Save post to see iframe.
+###Uninstall plugin
+
+1. Go to the Admin->Package Manager
+
+2. Oppozit groupDocs Viewer click Uninstall
+
+3. On next screen click Uninstall now
 
 ###[Sign, Manage, Annotate, Assemble, Compare and Convert Documents with GroupDocs](http://groupdocs.com)
 * [GroupDocs Viewer - HTML5 PDF Viewer tool for SMF CMS](http://groupdocs.com/apps/viewer)
